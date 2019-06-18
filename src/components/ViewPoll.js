@@ -25,6 +25,14 @@ class ViewPoll extends Component {
     const { author, timestamp, optionOne, optionTwo } = this.props.questions[
       this.props.match.params.id
     ];
+
+    console.group("questões");
+    console.log("the question", question);
+    console.log("the author", author);
+    console.log("the timestamp", timestamp);
+    console.log("option one", optionOne);
+    console.log("option two", optionTwo);
+    console.groupEnd();
     return (
       <div className="question">
         <Card style={{ width: "100%" }}>

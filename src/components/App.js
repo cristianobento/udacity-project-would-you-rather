@@ -35,7 +35,7 @@ class App extends React.Component {
                 component={ViewPollResults}
               />
               <PrivateRoute path="/leaderboard" exact component={Leaderboard} />
-              <PrivateRoute component={Handle404} />
+              <Route path="/error" component={Handle404} />
             </Switch>
           </Fragment>
         </div>

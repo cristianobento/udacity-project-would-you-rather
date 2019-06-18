@@ -55,7 +55,7 @@ class Login extends Component {
     const { from } = this.props.location.state || { from: { pathname: "/" } };
     const { redirectToReferrer } = this.state;
     if (redirectToReferrer === true && { from }.pathname !== "/login") {
-      return <Redirect to={from} />;
+      return <Redirect to='/error' />;
     }
     return (
       <Card className="text-center">
