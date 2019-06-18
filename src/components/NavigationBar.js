@@ -38,7 +38,7 @@ class NavigationBar extends Component {
               </NavLink>
             </div>
           ) : (
-            <div></div>
+            <div />
           )}
         </Nav>
       </Navbar>

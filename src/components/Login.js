@@ -71,7 +71,7 @@ class Login extends Component {
             Login
           </Button>
         </Card.Body>
-        <Card.Footer className="text-muted"></Card.Footer>
+        <Card.Footer className="text-muted" />
       </Card>
     );
   }

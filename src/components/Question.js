@@ -18,7 +18,7 @@ class Question extends Component {
     const { question } = this.props;
     const { name, avatar, timestamp, optionOne, optionTwo, id } = question;
     return (
-      <div className='question'>
+      <div className="question">
         <Card style={{ width: "100%" }}>
           <Card.Header>
             <img src={avatar} alt={`Avatar of ${name}`} className="avatar" />
