@@ -12,6 +12,7 @@ import PrivateRoute from "./PrivateRoute";
 import Handle404 from "./Handle404";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import AddQuestion from "./AddQuestion";
+import PollError from "./PollError";
 
 class App extends React.Component {
   componentDidMount() {
@@ -35,7 +36,8 @@ class App extends React.Component {
                 component={ViewPollResults}
               />
               <PrivateRoute path="/leaderboard" exact component={Leaderboard} />
-              <Route path="/error" component={Handle404} />
+              <PrivateRoute path="/poll-error" exact component={PollError} />
+              <Route path="*" component={Handle404} />
             </Switch>
           </Fragment>
         </div>

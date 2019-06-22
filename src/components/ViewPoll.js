@@ -4,6 +4,7 @@ import Card from "react-bootstrap/Card";
 import { withRouter } from "react-router-dom";
 import { connect } from "react-redux";
 import { formatDate } from "../utils/helpers";
+import { Redirect } from "react-router-dom";
 
 class ViewPoll extends Component {
   state = {
@@ -22,17 +23,15 @@ class ViewPoll extends Component {
   }
   render() {
     const question = this.props.questions[this.props.match.params.id];
+
+    if (typeof question === "undefined") {
+      return <Redirect to={"/poll-error"} />;
+    }
+
     const { author, timestamp, optionOne, optionTwo } = this.props.questions[
       this.props.match.params.id
     ];
 
-    console.group("questões");
-    console.log("the question", question);
-    console.log("the author", author);
-    console.log("the timestamp", timestamp);
-    console.log("option one", optionOne);
-    console.log("option two", optionTwo);
-    console.groupEnd();
     return (
       <div className="question">
         <Card style={{ width: "100%" }}>
